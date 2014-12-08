@@ -28,4 +28,12 @@ describe ('Airport', function() {
 		expect(airport.planeCount()).toEqual(0)
 	});
 
+	it('should not let planes take off if bad weather', function() {
+		expect(airport.weather("stormy")).toEqual("Takeoff is not allowed");
+	});
+
+	it('clears planes for takeoff if weather is good', function() {
+		expect(airport.weather("clear")).toEqual("Fine for takeoff");
+	});
+
 });
