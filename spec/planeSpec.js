@@ -17,4 +17,14 @@ describe('Plane', function() {
 		expect(plane.flying).toBe(true);
 	});
 
+	it('should be at the airport once landed', function() {
+		plane.lands(airport);
+		expect(airport.planes).toEqual([plane]);
+	});
+
+	it('should be out of the airport when flying', function() {
+		plane.takeOff(airport);
+		expect(airport.planes).toEqual([]);
+	});
+
 });
