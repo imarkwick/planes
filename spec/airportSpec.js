@@ -35,5 +35,4 @@ describe ('Airport', function() {
 	it('clears planes for takeoff if weather is good', function() {
 		expect(airport.weather("clear")).toEqual("Fine for takeoff");
 	});
-
 });
